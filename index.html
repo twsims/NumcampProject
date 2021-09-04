@@ -30,13 +30,56 @@
                    <h1>NuCamp</h1>
                    <h2>a better way to camp</h2>
                 </div>
-                <div class="col-md-2 align-md-end">
-                    <a href="#reserveForm" role="button" class="btn btn-lg bg-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or Call us at <br /> <strong>1-205-555-1234</strong>">Reserve Campsite</a>
-                </div>
-            </div> 
-        </div>
+                <div class="col-md-4 col-2-xl">
+                    <a role="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#reserveModal" title="Or call us at 1-206-555-1234">
+                        Reserve Campsite</a>
+                </div>    
+            </div>
+        </div>     
     </header>
-   
+ 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div> 
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                        <div class="row form-group">
+                            <label for="numCampers" class="col-sm-6 mx-auto col-form-label">Number of Campers</label>
+                            <div class="col">
+                                <select class="form-control" id="numCampers" name="numCampers">
+                                    <option selected>Select...</option>
+                                    <option value>1</option>
+                                    <option value>2</option>
+                                    <option value>3</option>
+                                    <option value>4</option>
+                                    <option value>5</option>
+                                    <option value>6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label for="date" class="col-sm-6 mx-auto col-form-label">Date</label>
+                            <div class="col-sm-6 mx-auto">
+                                <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                                <button class="btn btn-primary" type="cancel" data-dismiss="modal">Cancel</button>
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html"><img src="img/logo.png" height="30" width="30" /></a>
@@ -186,12 +229,12 @@
                 </div>
             </div>
         </div>
-            <div class="row row-content">
+           <!--  <div class="row row-content">
                 <div class="col-6 mx-auto">
                     <div class="card">
                       <h3 class="card-header bg-info text-white"> Reserve a Campsite </h3>
                         <div class="card-body">
-                            <form id="reserveForm">
+                                <form id="reserveForm">
                                 <div class="row form-group">
                                     <label class="col-sm-6 mx-auto col-form-label">Number of Campers</label>
                                     <div class="col-sm-6 mx-auto">
@@ -217,11 +260,11 @@
                                     <button class="btn btn-primary" type="submit">Search</button>
                                     </div>
                                 </div>
-                            </form>
+                            </form> 
                         </div>
                     </div>    
                 </div>
-            </div>    
+            </div>    --> 
     </div>
 
     <footer class="site-footer">
@@ -255,11 +298,11 @@
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
- <script>
+<!--  <script>
      $(function() {
          $('[data-toggle="tooltip"]').tooltip()
      })
- </script>   
+ </script>    -->
 </body>
 
 </html>
